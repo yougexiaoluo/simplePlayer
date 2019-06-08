@@ -1,0 +1,129 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 16px;
+}
+
+.show {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+header {
+  min-height: 80px;
+  background: saddlebrown;
+}
+
+main {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+main .search-bar {
+  width: 300px;
+  min-width: 300px;
+  margin-bottom: 100px;
+  position: relative;
+}
+main .search-bar .search-w {
+  position: relative;
+  font-size: 0;
+  height: 30px;
+  overflow: hidden;
+}
+main .search-bar .search-w .search {
+  width: 80%;
+  height: 100%;
+  border: 1px solid #aaa;
+  background: rgba(120, 120, 120, 0.1);
+  color: #333;
+  font-size: 14px;
+  padding: 0 5px;
+}
+main .search-bar .search-w i {
+  position: absolute;
+  top: 50%;
+  right: 22%;
+  transform: translateY(-50%);
+}
+main .search-bar .search-w button.search-btn {
+  width: 20%;
+  height: 100%;
+  min-width: 60px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: #ff8521;
+  color: #fff;
+  cursor: pointer;
+}
+main .search-bar .record {
+  display: none;
+  width: calc(80% - 2px);
+  border: 1px solid #aaa;
+  border-top: 0;
+  position: absolute;
+  top: 30px;
+  left: 0;
+}
+main .search-bar .record li {
+  cursor: pointer;
+  font-size: 13px;
+  padding-right: 30px;
+  padding-left: 5px;
+  position: relative;
+}
+main .search-bar .record li span {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+main .search-bar .record li i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  opacity: 0;
+}
+main .search-bar .record li:hover i {
+  opacity: 1;
+}
+main .search-bar .record li:hover {
+  background: #ddd;
+}
+main section {
+  width: 50%;
+}
+main section .songs li {
+  padding: 5px;
+}
+main section .songs li span {
+  cursor: pointer;
+}
+main section .songs li span.song_n {
+  margin-right: 8px;
+}
+main section .songs li span:hover {
+  color: #f89808;
+}
+main section .songs li p {
+  font-size: 12px;
+}
+main section .songs li:nth-child(n) {
+  background: rgba(209, 209, 209, 0.5);
+}
+main section .songs li:nth-child(2n) {
+  background: rgba(209, 208, 208, 0.336);
+}
+
+/*# sourceMappingURL=index.css.map */

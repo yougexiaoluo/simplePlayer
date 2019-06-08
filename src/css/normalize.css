@@ -1,0 +1,135 @@
+  /* 重置浏览器默认样式，以其让元素表现一致 */
+  /* 清除默认内外边距 */
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ul,
+  ol,
+  dd,
+  p,
+  aside,
+  header,
+  main,
+  section,
+  article,
+  footer,
+  figure,
+  nav {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 兼容IE <!--if lt IE 9]>　　<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>　　<![endif]--> */
+  aside,
+  header,
+  main,
+  section,
+  article,
+  footer,
+  figure {
+    display: block;
+  }
+
+  html,
+  body {
+    line-height: 1.15em;
+    font-family: Arial, "黑体", "Mycrosoft YaHei", "sans-serif";
+  }
+
+  /* li标签前默认小圆点 */
+  li {
+    list-style: none;
+  }
+
+  input,
+  textarea,
+  button {
+    outline: 0 none;
+    -webkit-outline: 0 none;
+    box-sizing: border-box;
+  }
+
+  input,
+  button {
+    border: 0 none;
+    vertical-align: top;
+  }
+
+  /* 取消文本域可缩放状态 */
+  textarea {
+    resize: none;
+  }
+
+  /* 清除a标签不继承颜色，下划线 */
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* 重置img图片默认baseline对其 */
+  img {
+    vertical-align: top;
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+
+  /* 工具类 Start */
+  /* 清除浮动 */
+  .clearfix {
+    *zoom: 1;
+  }
+
+  .clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+  }
+
+  /* 浮动 */
+  .fl {
+    float: left;
+  }
+
+  .fr {
+    float: right;
+  }
+
+  /* 水平 -- 对齐 */
+  .tc {
+    text-align: center;
+  }
+
+  .tl {
+    text-align: left;
+  }
+
+  .tr {
+    text-align: right;
+  }
+
+  /* 垂直 -- 对齐 */
+  .vt {
+    vertical-align: top;
+  }
+
+  .vm {
+    vertical-align: middle;
+  }
+
+  .vb {
+    vertical-align: bottom;
+  }
+
+  /* 工具类 End */

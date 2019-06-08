@@ -1,0 +1,164 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 16px;
+}
+
+// 公共代码
+$gray: #aaa;
+$fff: #fff;
+$t_late_y: translateY(-50%);
+
+@mixin ellipse {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+// 工具类 
+.show {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+// header 
+header {
+  min-height: 80px;
+  background: saddlebrown;
+}
+
+main {
+  padding-top: 20px;
+  padding-left: 20px;
+
+  // search-bar
+  .search-bar {
+    width: 300px;
+    min-width: 300px;
+    margin-bottom: 100px;
+    position: relative;
+
+    .search-w {
+      position: relative;
+      font-size: 0;
+      height: 30px;
+      overflow: hidden;
+
+      .search {
+        width: 80%;
+        height: 100%;
+        border: 1px solid $gray;
+        background: rgba(120, 120, 120, .1);
+        color: #333;
+        font-size: 14px;
+        padding: 0 5px;
+      }
+
+      i {
+        position: absolute;
+        top: 50%;
+        right: 22%;
+        transform: $t_late_y;
+      }
+
+      button.search-btn {
+        width: 20%;
+        height: 100%;
+        min-width: 60px;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background: rgb(255, 133, 33);
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+
+    // record
+    .record {
+      display: none;
+      width: calc(80% - 2px);
+      border: 1px solid $gray;
+      border-top: 0;
+      position: absolute;
+      top: 30px;
+      left: 0;
+
+      li {
+        cursor: pointer;
+        font-size: 13px;
+        padding-right: 30px;
+        padding-left: 5px;
+        position: relative;
+
+        span {
+          display: block;
+          width: 100%;
+          @include ellipse;
+        }
+
+        i {
+          position: absolute;
+          top: 50%;
+          right: 10px;
+          transform: $t_late_y;
+          opacity: 0;
+        }
+      }
+
+
+      li:hover i {
+        opacity: 1;
+      }
+
+      li:hover {
+        background: #ddd;
+      }
+    }
+  }
+
+  // content
+  section {
+    width: 50%;
+
+    .songs {
+      li {
+        padding: 5px;
+
+        span {
+          cursor: pointer;
+
+          &.song_n {
+            margin-right: 8px;
+          }
+        }
+
+        span:hover {
+          color: rgb(248, 152, 8);
+        }
+
+        p {
+          font-size: 12px;
+        }
+      }
+
+      li:nth-child(n) {
+        background: rgba(209, 209, 209, 0.5);
+      }
+
+      li:nth-child(2n) {
+        background: rgba(209, 208, 208, 0.336);
+      }
+    }
+  }
+}

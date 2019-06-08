@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport'
+    content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <meta name="format-detection" content="email=no,telephone=no">
+  <meta name="renderer" content="webkit">
+  <title>简易播放器</title>
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_1230407_05ermd05tioh.css">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <script type="text/html" id="art-template">
+    {{each songs as item}}
+    <li set-index="{{index}}">
+      <span class="song_n">{{item.name}}</span>
+      {{if item.mvid != 0}}
+      <span class="mv"> mv </span>
+      {{/if}}
+      <p class="artists">
+        {{each item.artists as singer}}
+          {{if item.artists.length > 1}}
+            {{if $index == 1}}
+            、{{singer.name}}
+            {{else}}
+            {{singer.name}}
+            {{/if}}
+            
+          {{else }}
+            {{singer.name}}
+          {{/if}}
+        {{/each}}
+      </p>
+    </li>
+    {{/each}}
+  </script>
+</head>
+
+<body>
+  <!-- header Start -->
+  <header></header>
+  <!-- header Ended -->
+  <!-- main Start -->
+  <main>
+    <!-- searchBar -->
+    <div class="search-bar">
+      <div class="search-w">
+        <input type="text" class="search">
+        <i class="iconfont icon-search"></i>
+        <button class="search-btn">搜索</button>
+      </div>
+      <ul class="record">
+        <li>
+          <span></span>
+          <i class="iconfont icon-close"></i>
+        </li>
+      </ul>
+    </div>
+    <!-- content -->
+    <section class="content">
+      <ul class="songs">
+        <!-- <li>
+          <span class="song_n">醉赤壁</span>
+          <span class="mv">mv</span>
+          <p class="artists">林俊杰、莫文蔚</p>
+        </li> -->
+      </ul>
+    </section>
+  </main>
+  <!-- main Ended -->
+  <!-- footer Start -->
+  <!-- footer Ended -->
+</body>
+<!-- 解决移动端click 300ms延迟 -->
+<script src="https://cdn.bootcss.com/fastclick/1.0.5/fastclick.min.js"></script>
+<script src="./js/template.js"></script>
+<script src="./js/resize.js"></script>
+<script src="./js/API.js"></script>
+<script src="./js/ajax.js"></script>
+<script src="js/index.js"></script>
+
+</html>
